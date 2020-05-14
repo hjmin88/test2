@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Dashboard</title>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        var dashboardTime;
+        function show5m() {
+            dashboardTime = '5m';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+        function show10m() {
+            dashboardTime = '10m';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+        function show30m() {
+            dashboardTime = '30m';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+        function show1h() {
+            dashboardTime = '1h';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+        function show4h() {
+            dashboardTime = '4h';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+        function show10h() {
+            dashboardTime = '10h';
+            $('#iframe_dashboard').attr('src','http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-' + dashboardTime + '%2Cto%3Anow))')
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <input type="button" onclick=show5m()>5분</input>
+        <input type="button" onclick=show10m()>10분</input>
+        <input type="button" onclick=show30m()>30분</input>
+        <input type="button" onclick=show1h()>1시간</input>
+        <input type="button" onclick=show4h()>4시간</input>
+        <input type="button" onclick=show10h()>10시간</input>
+        <span style="margin-left:20px;"></span>id: viewer / pw: spring#007
+    </p>
+    <iframe id="iframe_dashboard" src="http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-30m%2Cto%3Anow))" height="800" width="100%"></iframe>
+</body>
+</html>
