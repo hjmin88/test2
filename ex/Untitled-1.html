@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe 로딩 순서</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                    if(confirm('테스트') == true) {
+                    alert('확인');
+                    setTimeout(function(){
+                        $('#text').html('확인');    
+                    }, 5000);
+                    return false;
+                } else { 
+                    alert('취소');
+                    $('#text').html('취소');
+                    return false;
+                }
+            });        
+    </script>    
+</head>
+<body>
+iframe 바깥에 있는 스크립트 로딩 완료 된 후 iframe 실행하는가?
+<div id="text"></div>
+<iframe src="http://115.93.143.2:5601/app/kibana#/dashboard/e1105200-9427-11ea-b299-8b93b2b9a332?embed=true&_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A1000)%2Ctime%3A(from%3Anow-30m%2Cto%3Anow))" height="800" width="100%"></iframe>
+</body>
+</html>
